@@ -63,7 +63,17 @@ internal/feed/          fetch (conditional GET) + parse Atom + Ongoing() filter
 internal/icon/          programmatic icons (base template + red-dot incident)
 internal/notify/        Notification Centre banner via osascript
 build/                  Info.plist, make-app.sh, LaunchAgent plist
+third_party/systray/    vendored fork of fyne.io/systray (see below)
 ```
+
+The app pins a **local fork of `fyne.io/systray`** under `third_party/systray`,
+wired in via a `replace` directive in `go.mod`. The only change is a one-method
+patch to `show_menu` in `systray_darwin.m`: it attaches the menu to the status
+item and triggers it via the button so AppKit positions the dropdown directly
+below the menu bar. Upstream pops the menu at the button's zero origin, which
+renders it *over* the menu-bar icons until a mouse move forces a relayout. To
+re-sync the fork to a newer upstream, re-copy it from the module cache and
+re-apply that patch.
 
 ## Testing
 
