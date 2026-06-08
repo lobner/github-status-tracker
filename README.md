@@ -10,6 +10,8 @@ incidents the way Outlook and Teams do:
 - A **Notification Centre banner** when a *new* incident first appears while the
   app is running.
 
+<img width="251" height="187" alt="Screenshot 2026-06-08 at 23 47 37" src="https://github.com/user-attachments/assets/a71b25e6-4812-422d-b700-4dd7476fc51b" />
+
 The dropdown lists each ongoing incident (click to open it), plus *Open GitHub
 Status page*, *Refresh now*, the last-checked time, and *Quit*.
 
