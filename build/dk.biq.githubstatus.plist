@@ -4,21 +4,23 @@
 <dict>
 	<key>Label</key>
 	<string>dk.biq.githubstatus</string>
+
+	<!-- Launch through `open` so macOS (LaunchServices) honours the bundle's
+	     LSUIElement flag and keeps the app out of the Dock and app switcher.
+	     `-W` makes the job stay alive for as long as the app runs.
+	     Adjust the path if you install the app somewhere other than /Applications. -->
 	<key>ProgramArguments</key>
 	<array>
-		<!-- Adjust if you install the .app somewhere other than /Applications. -->
-		<string>/Applications/GitHub Status.app/Contents/MacOS/githubstatus</string>
+		<string>/usr/bin/open</string>
+		<string>-W</string>
+		<string>/Applications/GitHub Status.app</string>
 	</array>
+
+	<!-- Start automatically at login. Deliberately NO KeepAlive: choosing Quit
+	     from the menu should actually quit the app, not have launchd relaunch it. -->
 	<key>RunAtLoad</key>
 	<true/>
-	<key>KeepAlive</key>
-	<true/>
-	<!-- Optional: override the poll interval.
-	<key>EnvironmentVariables</key>
-	<dict>
-		<key>POLL_SECONDS</key>
-		<string>60</string>
-	</dict>
-	-->
+	<key>ProcessType</key>
+	<string>Interactive</string>
 </dict>
 </plist>
