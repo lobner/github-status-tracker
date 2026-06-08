@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Built menu-bar app bundle (produced by build/make-app.sh)
+*.app/
+
+# Compiled binaries
+/githubstatus
+/githus-status-tracker
+*.test
+*.out
+
+# Local Claude Code settings
+.claude/

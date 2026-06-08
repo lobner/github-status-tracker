@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>dk.biq.githubstatus</string>
+	<key>ProgramArguments</key>
+	<array>
+		<!-- Adjust if you install the .app somewhere other than /Applications. -->
+		<string>/Applications/GitHub Status.app/Contents/MacOS/githubstatus</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+	<!-- Optional: override the poll interval.
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>POLL_SECONDS</key>
+		<string>60</string>
+	</dict>
+	-->
+</dict>
+</plist>
