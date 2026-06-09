@@ -96,3 +96,11 @@ ICON_DUMP_DIR=/tmp go test -tags dumpicons ./internal/icon # write the icons to 
   (alert only when e.g. Actions or Copilot is affected) would need GitHub's JSON
   APIs (`/api/v2/status.json`, `/api/v2/incidents/unresolved.json`); the feed
   layer is isolated in `internal/feed` so swapping the source is straightforward.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+It vendors a fork of [`fyne.io/systray`](https://github.com/fyne-io/systray)
+under `third_party/systray/`, which is licensed under the Apache License 2.0 and
+retains its own [`LICENSE`](third_party/systray/LICENSE).
